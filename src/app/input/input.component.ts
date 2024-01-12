@@ -11,6 +11,6 @@ export class InputComponent {
 
  // testarr: = ["text", "button", "checkbox"] 
 
-  @Input({ required: true }) type = '';
+  @Input({ required: true }) type = 'test';
 
 }
