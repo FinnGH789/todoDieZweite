@@ -1,1 +1,7 @@
-<input type="{{ type }}">
+<div class="input-text">
+  <input
+    type="text"
+    placeholder=" "
+    [attr.id]="id"
+  /><label [attr.for]="id">{{ label }}</label>
+</div>

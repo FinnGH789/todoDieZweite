@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+let index = 0;
+
 @Component({
   selector: 'tda-input',
   standalone: true,
@@ -9,8 +11,7 @@ import { Component, Input } from '@angular/core';
 })
 export class InputComponent {
 
- // testarr: = ["text", "button", "checkbox"] 
-
-  @Input({ required: true }) type = 'test';
+  @Input({ required: true }) label!: string;
+  @Input() id = `input-text-${index++}`;
 
 }
