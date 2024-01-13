@@ -1,0 +1,31 @@
+<div class="container">
+    <form [formGroup]="validationToDo">
+    <div class="todo-form">
+      <h1>Enter your Todo</h1>
+      <div class="grid--input">
+        <tda-input [label]="'Name'" [control]="f.name"></tda-input>
+        <div class="text-invalid">
+          @if (f.name.errors?.["required"] && f.name.touched) {
+            {{ 'Eingabe ungültig!' }}
+          }
+        </div>
+        <tda-input [label]="'Priority'"></tda-input>
+        <div class="text-invalid">
+          @if (f.description.touched) {
+            {{'hppppp'}}
+          }
+        </div>
+        <tda-input [label]="'Description'" class="test"></tda-input>
+      </div>
+    </div>
+  </form>
+  </div>
+
+  <form [formGroup]="testForm">
+  <tda-input style="padding: 200px;" [label]="'Bitte'" [control]="testcontrol.testName"></tda-input>
+  <div class="text-invalid">
+    @if (testcontrol.testName.errors && testcontrol.testName.touched) {
+      {{ 'Hello' }}
+    }
+  </div>
+</form>
