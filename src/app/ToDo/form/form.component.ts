@@ -30,13 +30,4 @@ export class FormComponent {
   get f() {
     return this.validationToDo.controls;
   }
-
-  testForm = new FormGroup({
-    testName: new FormControl<string>('', {
-      validators: [Validators.maxLength(2)],
-    })})
-
-    get testcontrol() {
-      return this.testForm.controls;
-    }
 }
