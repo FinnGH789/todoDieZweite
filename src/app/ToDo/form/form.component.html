@@ -1,17 +1,13 @@
 <div class="container">
-    <form [formGroup]="validationToDo">
-    <div class="todo-form">
-      <h1>Enter your Todo</h1>
-      <div class="grid--input">
-        <tda-input [label]="'Name'" [control]="f.name"></tda-input>
-        <div class="text-invalid">
-          @if (f.name.errors && f.name.touched) {
-            {{ 'Eingabe ungültig!' }}
-          }
-        </div>
-        <tda-input [label]="'Priority'"></tda-input>
-        </div>
-        <tda-input [label]="'Description'" class="test"></tda-input>
-      </div>
-  </form>
+  <div class="todo-form">
+    <h1>Enter your Todo</h1>
+    <div [formGroup]="formGroup">
+      <tda-input [label]="'Name'" formControlName="name"></tda-input>
+      <tda-input [label]="'Priority'" formControlName="priority"></tda-input>
+      <tda-input
+        [label]="'Description'"
+        formControlName="description"
+      ></tda-input>
+    </div>
   </div>
+</div>

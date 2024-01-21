@@ -5,14 +5,17 @@ import { FormComponent } from './ToDo/form/form.component';
 import { InputComponent } from './input/input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AnalyticsComponent } from './ToDo/analytics/analytics.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,AnalyticsComponent , RouterOutlet, FormComponent, InputComponent, ReactiveFormsModule],
+  imports: [
+    InputComponent,
+    ReactiveFormsModule,
+    LayoutComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'TodoSteroid';
-}
+export class AppComponent {}

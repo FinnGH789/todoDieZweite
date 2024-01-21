@@ -3,34 +3,24 @@ import { InputComponent } from '../../input/input.component';
 import {
   FormControl,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { LayoutComponent } from '../../layout/layout.component';
 
 @Component({
   selector: 'tda-form',
   standalone: true,
-  imports: [InputComponent, ReactiveFormsModule],
+  imports: [
+    InputComponent,
+    ReactiveFormsModule,
+    LayoutComponent,
+    FormComponent,
+  ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
 export class FormComponent {
-  validationToDo = new FormGroup({
-    name: new FormControl<string>('', {
-      validators: [Validators.required, Validators.maxLength(2)],
-    }),
-    priority: new FormControl('', {
-      validators: [Validators.required, Validators.maxLength(255)],
-    }),
-    description: new FormControl('', {
-      validators: [Validators.required, Validators.maxLength(255)],
-    }),
-  });
-
-  get f() {
-    return this.validationToDo.controls;
-  }
-
-
-  
+  @Input() formGroup! : FormGroup;
 }
