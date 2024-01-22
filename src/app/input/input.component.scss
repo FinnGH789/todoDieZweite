@@ -1,37 +1,55 @@
 :host {
-  display: block;
+  display: grid;
+  gap: 0.25em;
 }
+
 input {
   background-color: transparent;
   border: 0;
-  bottom: -0.4em;
+  bottom: 0.25em;
   height: 100%;
   outline: 0;
   padding-top: 1.5em;
   position: absolute;
   width: 100%;
 }
+
 .input-text {
-  background-color: #ededed;
-  color: #575757;
+  background-color: var(--tda-clr-100);
+  color: var(--tda-clr-900);
   height: 3em;
   padding: 0.25em;
   position: relative;
 }
+.input-text:has(input:disabled) {
+  background-color: var(--tda-clr-075);
+  color: var(--tda-clr-700);
+}
+
 .input-text::after {
-  background-color: #575757;
+  background-color: var(--tda-clr-900);
   bottom: 0;
-  content: "";
+  content: '';
   height: 1px;
   left: 0;
   position: absolute;
   width: 100%;
 }
+
 .input-text:hover::after,
 .input-text:focus-within::after {
-  background-color: #009fe3;
+  background-color: var(--tda-clr-primary);
   height: 2px;
 }
+.input-text:has(input:disabled):hover::after {
+  background-color: var(--tda-clr-900);
+  height: 1px;
+}
+
+:host(.ng-touched.ng-invalid) .input-text::after {
+  background-color: var(--tda-clr-error);
+}
+
 label {
   left: 0.5em;
   position: absolute;
@@ -41,13 +59,27 @@ label {
     font-size 350ms,
     top 350ms;
 }
+
 .input-text:hover > label,
 .input-text:focus-within > label,
 input:not(:placeholder-shown) + label {
   font-size: 0.85em;
   top: 0.25em;
 }
+
 .input-text:hover > label,
 .input-text:focus-within > label {
-  color: #009fe3;
+  color: var(--tda-clr-primary);
+}
+
+.input-text:has(input:disabled):hover > label {
+  color: var(--tda-clr-700);
+}
+.input-text:has(input:disabled:placeholder-shown):hover > label {
+  font-size: unset;
+  top: 1em;
+}
+
+:host(.ng-touched.ng-invalid) label {
+  color: var(--tda-clr-error);
 }

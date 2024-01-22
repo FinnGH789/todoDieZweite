@@ -1,12 +1,28 @@
-:before,
+:root {
+  --tda-clr-primary: cyan;
+  --tda-clr-secondary: lightgreen;
+  --tda-clr-accent: yellow;
+  --tda-clr-error: red;
+  --tda-clr-050: #ffffff;
+  --tda-clr-075: #fafafa;
+  --tda-clr-100: #ededed;
+  --tda-clr-300: #dadada;
+  --tda-clr-500: #c6c6c6;
+  --tda-clr-700: #9d9d9d;
+  --tda-clr-900: #575757;
+}
+
+*,
+*:before,
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 html,
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: RobotoFix, Arial, Helvetica, sans-serif;
   font-size: 13px;
   height: 100%;
   margin: 0;
@@ -14,37 +30,42 @@ body {
   scroll-behavior: smooth;
   width: 100%;
 }
+
 h1 {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--tda-clr-050);
+  font-family: 'Avenir Next LT W04 Condensed';
 }
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #009fe3;
-  font-family: "Arial, Helvetica, sans-serif";
+  color: var(--tda-clr-primary);
+  font-family: 'Avenir Next LT W04 Condensed';
+  margin-top: 0;
 }
+
 h2::after,
 h3::after,
 h4::after,
 h5::after,
 h6::after {
-  background-color: #009fe3;
-  content: "";
+  background-color: var(--tda-clr-primary);
+  content: '';
   display: block;
   height: 2px;
   margin-top: 0.75rem;
   position: relative;
   width: 7.5rem;
 }
-input[type="button"],
+
+input[type='button'],
 button {
-  background-color: #ffffff;
-  border: 2px solid var#009fe3;
+  background-color: var(--tda-clr-050);
+  border: 2px solid var(--tda-clr-primary);
   border-radius: 4px;
-  color: #009fe3;
+  color: var(--tda-clr-primary);
   cursor: pointer;
   height: 2.25em;
   line-height: 1.5em;
@@ -53,22 +74,29 @@ button {
     background-color 500ms,
     color 500ms;
 }
-input[type="button"].secondary,
+
+input[type='button'].secondary,
 button.secondary {
-  background-color: #cdff00;
+  background-color: var(--tda-clr-secondary);
 }
-input[type="button"]:hover,
-input[type="button"]:focus,
+
+input[type='button']:hover,
+input[type='button']:focus,
 button:hover,
 button:focus {
-  background-color: #009fe3;
-  color: #ffffff;
+  background-color: var(--tda-clr-primary);
+  color: var(--tda-clr-050);
   outline: 0;
 }
-input[type="button"]:disabled,
+
+input[type='button']:disabled,
 button:disabled {
-  background-color: #ffffff;
-  border-color: #dadada;
-  color: #dadada;
+  background-color: var(--tda-clr-050);
+  border-color: var(--tda-clr-300);
+  color: var(--tda-clr-300);
   pointer-events: none;
+}
+
+.error {
+  color: var(--tda-clr-error);
 }

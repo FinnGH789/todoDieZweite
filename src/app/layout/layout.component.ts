@@ -17,11 +17,5 @@ import { InputComponent } from '../input/input.component';
   styleUrl: './layout.component.scss',
 })
 export class LayoutComponent {
-  public formGroupParent = new FormGroup({
-    todoFormGroup: new FormGroup({
-      name: new FormControl('', Validators.maxLength(2)),
-      priority: new FormControl('', Validators.maxLength(2)),
-      description: new FormControl('', Validators.maxLength(2)),
-    }),
-  });
+
 }

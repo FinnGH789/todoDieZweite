@@ -1,8 +1,14 @@
 <div class="input-text">
   <input
+    placeholder=""
     type="text"
-    placeholder=" "
     [attr.id]="id"
-  /><label [attr.for]="id">{{ label }}</label>
-
+    [disabled]="disabled"
+    [value]="value"
+  />
+  <label [attr.for]="id">{{ label }}</label>
 </div>
+
+@if (control.touched && control.hasError('required')) {
+  <div class="error">Dieses Feld ist ein Pflichtfeld!</div>
+}
