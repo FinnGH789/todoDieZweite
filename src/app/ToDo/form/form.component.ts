@@ -16,22 +16,13 @@ import { LayoutComponent } from '../../layout/layout.component';
     InputComponent,
     ReactiveFormsModule,
     LayoutComponent,
-    FormComponent,
+    FormComponent
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
-export class FormComponent implements OnChanges {
+export class FormComponent {
 
-  protected formGroup!: FormGroup;
+  @Input() formGroupTodo!: FormGroup;
 
-  constructor() {
-    this.formGroup = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.maxLength(4)]),
-      priority: new FormControl('', [Validators.required]),
-      status: new FormControl('', [Validators.required])
-    })
-  }
-  ngOnChanges(changes: SimpleChanges): void {
-  }
 }

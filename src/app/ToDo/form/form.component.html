@@ -1,10 +1,15 @@
-<form [formGroup]="formGroup">
-  <tda-input [label]="'Name'" formControlName="name" />
-  <tda-input [label]="'Priority'" formControlName="priority" />
-  <tda-input [label]="'Status'" formControlName="status" />
-  <div class="error">
-  @if (formGroup.controls['name'].hasError('maxlength')) {
-    Du hast da was vergessen!
-  }
+<div class="container">
+  <div class="form">
+    <div [formGroup]="formGroupTodo" class="test">
+      <div>
+        <tda-input [label]="'Name'" formControlName="name" class="jo" />
+      </div>
+      <div>
+        <tda-input [label]="'Priority'" formControlName="priority" class="jo" />
+      </div>
+      <div>
+        <tda-input [label]="'Status'" formControlName="status" class="jo" />
+      </div>
+    </div>
+  </div>
 </div>
-</form>
