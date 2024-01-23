@@ -1,15 +1,16 @@
 .container {
     display: flex;
-    margin: 1em;
-    
+    justify-content: center;
+    align-items: center;
 }
 
 .analytics__form {
-    border: 1px solid black;
+    border: 1.75px solid var(--tda-clr-primary);
     border-radius: 4px;
     width: 20em;
-    height: 15em;
-    padding: 1em;
+    height: 20em;
+    padding-left: 30%;
+    padding-top: 25%;
     transition: 1s;
 }
 

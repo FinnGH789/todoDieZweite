@@ -7,11 +7,12 @@ import {
   Validators,
 } from '@angular/forms';
 import { InputComponent } from '../input/input.component';
+import { AnalyticsComponent } from '../ToDo/analytics/analytics.component';
 
 @Component({
   selector: 'tda-layout',
   standalone: true,
-  imports: [FormComponent, ReactiveFormsModule, InputComponent],
+  imports: [FormComponent, ReactiveFormsModule, InputComponent, AnalyticsComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })

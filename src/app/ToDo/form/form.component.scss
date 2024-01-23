@@ -2,21 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  transition: 1s;
 }
 
 .form {
-  position: relative;
   border: 1.5px solid var(--tda-clr-primary);
   border-radius: 4px;
-  width: 20em;
-  height: 15em;
+  width: 25em;
+  height: 20em;
+  padding: 0.5em 1em 2em 1em;
+  transition: 1s;
 }
 
-.test {
-    position: relative;
-}
-
-.jo {
-    width: 15em;
+.form:hover {
+  transform: scale(1.07);
 }

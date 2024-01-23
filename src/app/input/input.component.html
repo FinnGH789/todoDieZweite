@@ -1,20 +1,20 @@
-<div>
-<div class="input-text">
-  <input
-    placeholder=""
-    type="text"
-    [attr.id]="id"
-    [disabled]="disabled"
-    [value]="value"
-  />
-  <label [attr.for]="id">{{ label }}</label>
-</div>
+<div class="container">
+  <div class="input-text">
+    <input
+      placeholder=""
+      type="text"
+      [attr.id]="id"
+      [disabled]="disabled"
+      [value]="value"
+    />
+    <label [attr.for]="id">{{ label }}</label>
+  </div>
 
-@if (control.touched && control.hasError("required")) {
-  <div class="error">Dieses Feld ist ein Pflichtfeld!</div>
-}
+  @if (control.touched && control.hasError("required")) {
+    <div class="error">Dieses Feld ist ein Pflichtfeld!</div>
+  }
 
-@if (control.touched && control.hasError("maxlength")) {
-  <div class="error">Sag ma bist du Dumm!</div>
-}
+  @if (control.touched && control.hasError("maxlength")) {
+    <div class="error">Sag ma bist du Dumm!</div>
+  }
 </div>
