@@ -13,5 +13,6 @@ const initialState: TodoState = {
 };
 
 export const TodoStore = signalStore(
+    { providedIn: 'root' },
     withState(initialState)
 )
