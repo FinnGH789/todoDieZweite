@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TodoStore } from '../../../state/todo.store';
 
 @Component({
   selector: 'tda-analytics',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './analytics.component.scss'
 })
 export class AnalyticsComponent {
+
+  todoStore = inject(TodoStore);
 
 }

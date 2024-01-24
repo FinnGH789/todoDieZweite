@@ -18,14 +18,15 @@ import { AnalyticsComponent } from '../ToDo/analytics/analytics.component';
 })
 export class LayoutComponent {
   formGroup = new FormGroup({
-    name: new FormControl('', {
+    name: new FormControl('1', {
       validators: [Validators.required, Validators.maxLength(2)],
     }),
-    priority: new FormControl('', {
+    priority: new FormControl('1', {
       validators: [Validators.required, Validators.maxLength(2)],
     }),
-    status: new FormControl('', {
+    status: new FormControl('1', {
       validators: [Validators.required, Validators.maxLength(2)],
     }),
   });
+
 }
