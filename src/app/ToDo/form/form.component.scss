@@ -17,3 +17,18 @@
 .form:hover {
   transform: scale(1.07);
 }
+
+.todoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border: 1px solid var(--tda-clr-primary);
+  width: 20em;
+  height: 5em;
+  border-radius: 4px;
+}
+
+p {
+  margin: 1em;
+}

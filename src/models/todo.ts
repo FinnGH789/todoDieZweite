@@ -1,5 +1,5 @@
 export type Todo = {
-    todo: string | null;
+    name: string | null;
     priority: string | null;
     status: boolean;
 }

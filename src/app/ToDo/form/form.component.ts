@@ -41,7 +41,21 @@ export class FormComponent {
 
 onSubmit() {
   this.todoStore.todos().push(this.formGroupTodo.value);
-  this.formGroupTodo.reset('')
+  this.todoStore.inProcessTodos().push(this.formGroupTodo.value);
+  this.formGroupTodo.reset('');
+}
+
+resetForm(){
+  this.formGroupTodo.reset('');
+}
+
+finishTodo(todo: Todo){
+  this.todoStore.finishedTodos().push(todo);
+  this.todoStore.inProcessTodos().splice(0, 1)
+}
+
+cancelTodo(todo: Todo){
+  this.todoStore.canceledTodos().push(todo)
 }
     
 }
