@@ -9,8 +9,6 @@
 }
 
 input {
-  background-color: transparent;
-  border: 0;
   bottom: 0.25em;
   height: 100%;
   outline: 0;
@@ -20,10 +18,9 @@ input {
 }
 
 .input-text {
-  background-color: var(--tda-clr-100);
+  border-color: 1px solid var(--tda-clr-primary);
   color: var(--tda-clr-900);
   height: 3em;
-  padding: 0.25em;
   position: relative;
 }
 .input-text:has(input:disabled) {
@@ -34,7 +31,6 @@ input {
 .input-text::after {
   background-color: var(--tda-clr-900);
   bottom: 0;
-  content: '';
   height: 1px;
   left: 0;
   position: absolute;
@@ -58,7 +54,7 @@ input {
 label {
   left: 0.5em;
   position: absolute;
-  top: 1em;
+  top: 0.75em;
   transition:
     color 350ms,
     font-size 350ms,
